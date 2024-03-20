@@ -1,0 +1,39 @@
+/* || THEME */
+
+.light {
+  /* BACKGROUND */
+  --BG-IMAGE: url(./assets/bg-mobile-light.jpg);
+  --BG-LINKS: rgba(0, 0, 0, 0.05);
+  --BG-LINKSHOVER: rgba(0, 0, 0, 0.02);
+  --BG-SWITCH: url(./assets/sun.svg);
+
+  /* COLORS */
+  --FONT-COLOR: rgba(0, 0, 0, 1);
+
+  /* BORDER */
+
+  --BORDER-COLOR: rgba(0, 0, 0, 0.5);
+  --BORDER-COLORHOVER: rgba(0, 0, 0, 1);
+
+  /* ICONS */
+
+  --ICON-HOVER: rgba(0, 0, 0, 0.1);
+}
+
+/* SWITCH */
+
+.light #switch button {
+  animation: slide-in 0.2s forwards;
+}
+
+/* || MEDIA QUERIES */
+
+@media (min-width: 700px) {
+  :root {
+    --BG-IMAGE: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --BG-IMAGE: url(./assets/bg-desktop-light.jpg);
+  }
+}

@@ -1,0 +1,200 @@
+/* || IMPORTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* || RESETS */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* || UTILITY CLASSES */
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+/* || VARIABLES */
+
+:root {
+  /* BACKGROUND */
+  --BG-IMAGE: url(./assets/bg-mobile.jpg);
+  --BG-LINKS: rgba(255, 255, 255, 0.1);
+  --BG-LINKSHOVER: rgba(255, 255, 255, 0.05);
+  --BG-SWITCH: url(./assets/moon-stars.svg);
+
+  /* COLORS */
+  --FONT-COLOR: rgba(245, 245, 245, 1);
+
+  /* BORDER */
+
+  --BORDER-COLOR: rgba(255, 255, 255, 0.5);
+  --BORDER-COLORHOVER: rgba(245, 245, 245, 1);
+
+  /* ICONS */
+
+  --ICON-HOVER: rgba(255, 255, 255, 0.2);
+}
+
+/* || GENERAL */
+
+body {
+  background: var(--BG-IMAGE) no-repeat top center/cover;
+  min-height: 100vh;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--FONT-COLOR);
+}
+
+/* || MAIN */
+
+.container {
+  width: 100%;
+  max-width: 588px;
+  margin: 0 auto;
+  padding: 40px 24px 0;
+}
+
+/* PROFILE */
+
+.profile__container {
+  padding: 24px;
+  text-align: center;
+}
+
+.profile__img {
+  border-radius: 50%;
+  width: 112px;
+  height: 112px;
+}
+
+p {
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* SWITCH */
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background-color: var(--BG-LINKS);
+  border: 1px solid var(--BORDER-COLOR);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255) var(--BG-SWITCH) no-repeat center;
+  border: none;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  animation: slide-out 0.2s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--ICON-HOVER);
+}
+
+/* LINKS */
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 0;
+}
+
+li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--BG-LINKS);
+  border: 1px solid var(--BORDER-COLOR);
+  border-radius: 8px;
+  padding: 16px 24px;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+li a:hover {
+  background-color: var(--BG-LINKSHOVER);
+  border: 1px solid var(--BORDER-COLORHOVER);
+}
+
+/* ICONS */
+
+.social__links {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  font-size: 24px;
+}
+
+.social__links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.social__links a:hover {
+  background: var(--ICON-HOVER);
+}
+
+/* || FOOTER */
+
+footer {
+  padding: 16px 0;
+  text-align: center;
+}
+
+/* || ANIMATION */
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}

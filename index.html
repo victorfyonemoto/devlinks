@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Victor Ferreira Yonemoto" />
+    <meta name="description" content="Um simples Portfolio!" />
+    <title>DevLinks</title>
+    <link rel="icon" href="./assets/link-outline.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="profile__container">
+        <figure id="profile">
+          <img
+            src="./assets/avatar.png"
+            alt="Foto de Victor usando camiseta preta e óculos"
+            class="profile__img" onmouseover="cartoonImage()" onmouseout="changePicture()"
+          />
+          <figcaption class="offscreen">
+            Foto de Victor F.Y.
+          </figcaption>
+        </figure>
+        <p>@victorf.y</p>
+      </div>
+      <div id="switch" onclick="changeTheme()">
+        <button></button>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <a target="_blank" href="https://beacons.ai/victorf.y">Beacons</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/victorfyonemoto"
+            >Github</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://www.tiktok.com/@victorf.y">Tiktok</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/in/victorfyonemoto"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://twitter.com/victorf_y">X</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.instagram.com/victorf.y/"
+            >Instagram</a
+          >
+        </li>
+      </ul>
+      <div class="social__links">
+        <a target="_blank" href="https://github.com/victorfyonemoto">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a target="_blank" href="https://www.tiktok.com/@victorf.y">
+          <ion-icon name="logo-tiktok"></ion-icon>
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/victorfyonemoto">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a target="_blank" href="https://twitter.com/victorf_y">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/victorf.y/">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </div>
+      <footer>Feito com ♥ por mim</footer>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
